@@ -243,6 +243,12 @@ Note: Ubuntu 12.04 is too old to support. Debian jessie may also be too old, and
 * Install OpenNI2 (optional)
     1. (Ubuntu 14.04 only) `sudo apt-add-repository ppa:deb-rob/ros-trusty && sudo apt-get update` (You don't need this if you have ROS repos), then `sudo apt-get install libopenni2-dev`
     2. (Other) `sudo apt-get install libopenni2-dev`
+* Install v4l2loopback-dksm (optional)
+    1. (Ubuntu) `sudo apt-get update && sudo apt-get install v4l2loopback-dkms` 
+    2. (Arch) `sudo pacman -S v4l2loopback-dksm`
+* Install OpenCV (optional)
+    1. (Ubuntu) `sudo apt-get update && sudo apt-get install libopencv-dev` 
+    2. (Arch) `sudo pacman -S opencv`
 * Build (if you have run `cd depends` previously, `cd ..` back to the libfreenect2 root directory first.)
     ```
     mkdir build && cd build
@@ -254,3 +260,4 @@ Note: Ubuntu 12.04 is too old to support. Debian jessie may also be too old, and
 * Set up udev rules for device access: `sudo cp ../platform/linux/udev/90-kinect2.rules /etc/udev/rules.d/`, then replug the Kinect.
 * Run the test program: `./bin/Protonect`
 * Run OpenNI2 test (optional): `sudo apt-get install openni2-utils && sudo make install-openni2 && NiViewer2`. Environment variable `LIBFREENECT2_PIPELINE` can be set to `cl`, `cuda`, etc to specify the pipeline.
+* To use kinect as webcam, you need to run `sudo modprobe v4l2loopback devices=1 video_nr=10 card_label="Kinect Webcam"` and then simply run `Kinect_Webcam`
