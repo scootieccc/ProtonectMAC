@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg665"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="packet_pipeline.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview667"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="2.0460067"
+     inkscape:cx="293.00979"
+     inkscape:cy="312.80445"
+     inkscape:window-width="1920"
+     inkscape:window-height="1044"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid786" />
+  </sodipodi:namedview>
+  <defs
+     id="defs662">
+    <marker
+       style="overflow:visible"
+       refX="2"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="EmptyDiamond"
+       id="EmptyDiamond"
+       markerWidth="7.6367531"
+       markerHeight="7.6367531"
+       viewBox="0 0 7.6367532 7.6367533"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.45)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 0,-7.0710768 -7.0710894,0 0,7.0710589 7.0710462,0 Z"
+         id="path108" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="EmptyTriangleIn"
+       refX="-1"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="EmptyTriangleIn"
+       markerWidth="5.8241119"
+       markerHeight="6.7330775"
+       viewBox="0 0 5.8241121 6.7330776"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-fill;fill-rule:evenodd;stroke:context-stroke;stroke-width:2"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path153" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="7"
+       markerHeight="4"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L"
+         transform="scale(-0.5)" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke:#1a1a1a;stroke-width:0.55;paint-order:markers fill stroke"
+       x="42.13966"
+       y="60.092167"
+       id="text790"><tspan
+         sodipodi:role="line"
+         id="tspan788"
+         style="font-size:3.175px;stroke:none;stroke-width:0.55"
+         x="42.13966"
+         y="60.092167">CudaPacketPipeline</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke:none;stroke-width:0.55;paint-order:markers fill stroke"
+       x="47.22073"
+       y="10.3505"
+       id="text2176"><tspan
+         sodipodi:role="line"
+         id="tspan2174"
+         style="stroke-width:0.55"
+         x="47.22073"
+         y="10.3505">PacketPipeline</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke:none;stroke-width:0.55;paint-order:markers fill stroke"
+       x="10.275358"
+       y="17.758833"
+       id="text3657"><tspan
+         sodipodi:role="line"
+         id="tspan3655"
+         style="stroke-width:0.55"
+         x="10.275358"
+         y="17.758833">PacketPipelineComponents *comp_;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke:none;stroke-width:0.55;paint-order:markers fill stroke"
+       x="10.583333"
+       y="25.696333"
+       id="text4387"><tspan
+         sodipodi:role="line"
+         id="tspan4385"
+         style="stroke-width:0.55"
+         x="10.583333"
+         y="25.696333">virtual PacketParser *getRgbPacketParser() const;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="10.583333"
+         y="29.665083"
+         id="tspan4389">virtual PacketParser *getIrPacketParser() const;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="10.583333"
+         y="33.633835"
+         id="tspan4391" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="10.583333"
+         y="37.602585"
+         id="tspan4393">virtual RgbPacketProcessor *getRgbPacketProcessor() const;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="10.583333"
+         y="41.571335"
+         id="tspan4395">virtual DepthPacketProcessor *getDepthPacketProcessor() const;</tspan></text>
+    <rect
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       id="rect4449"
+       width="101.86459"
+       height="42.333332"
+       x="7.9375"
+       y="5.2916665"
+       ry="1.3229169" />
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       d="M 7.9375,11.90625 H 109.80208"
+       id="path4557"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       d="m 7.9374999,21.166666 101.8645801,1e-6"
+       id="path4559"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       id="rect4608"
+       width="59.53125"
+       height="19.84375"
+       x="27.78125"
+       y="55.5625"
+       ry="1.3229166" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="28.910492"
+       y="68.029663"
+       id="text10178"><tspan
+         sodipodi:role="line"
+         id="tspan10176"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55"
+         x="28.910492"
+         y="68.029663">CudaPacketPipeline(const int deviceId)</tspan></text>
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       d="M 27.78125,71.4375 H 87.3125"
+       id="path4612"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;marker-end:url(#EmptyTriangleIn);paint-order:markers fill stroke"
+       d="m 56.885416,55.562499 10e-7,-5.291666"
+       id="path4614"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke:#1a1a1a;stroke-width:0.55;paint-order:markers fill stroke"
+       x="7.9375"
+       y="82.020836"
+       id="text5935"><tspan
+         sodipodi:role="line"
+         id="tspan5933"
+         style="font-size:3.175px;stroke:none;stroke-width:0.55"
+         x="7.9375"
+         y="82.020836">CudaPacketPipeline</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="52.916668"
+       y="82.020836"
+       id="text6779"><tspan
+         sodipodi:role="line"
+         id="tspan6777"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1"
+         x="52.916668"
+         y="82.020836">CudaDepthPacketProcessor</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 20.984166,83.34375 v 76.72917"
+       id="path668" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 68.609169,83.34375 v 76.72917"
+       id="path7551" />
+    <rect
+       style="fill:#d5f6ff;fill-opacity:1;stroke:#000000;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect7553"
+       width="2.6458333"
+       height="34.395832"
+       x="19.84375"
+       y="87.3125" />
+    <rect
+       style="fill:#d5f6ff;fill-opacity:1;stroke:#000000;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect7607"
+       width="2.6458333"
+       height="34.395832"
+       x="67.468758"
+       y="88.370827" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 22.489583,99.811667 H 65.616666"
+       id="path427"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;paint-order:markers fill stroke"
+       d="M 27.78125,61.9125 H 87.3125"
+       id="path10229"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke-width:0.55;paint-order:markers fill stroke"
+       x="120.38541"
+       y="50.270832"
+       id="text13182"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="50.270832"
+         id="tspan13204">~PacketPipelineComponents();</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="54.239582"
+         id="tspan13208">void initialize(RgbPacketProcessor *rgb,</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="58.208332"
+         id="tspan13411">                         DepthPacketProcessor *depth);</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke-width:0.55;paint-order:markers fill stroke"
+       x="137.27536"
+       y="9.8213329"
+       id="text13216"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="137.27536"
+         y="9.8213329"
+         id="tspan13242">PacketPipelineComponents</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;stroke-width:0.55;paint-order:markers fill stroke"
+       x="120.38541"
+       y="15.875"
+       id="text13372"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="15.875"
+         id="tspan13352">RgbPacketStreamParser *rgb_parser_;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="19.84375"
+         id="tspan13354">DepthPacketStreamParser *depth_parser_;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="23.8125"
+         id="tspan13356" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="27.78125"
+         id="tspan13358">RgbPacketProcessor *rgb_processor_;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="31.75"
+         id="tspan13360">BaseRgbPacketProcessor *async_rgb_processor_;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="35.71875"
+         id="tspan13362">DepthPacketProcessor *depth_processor_;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.55"
+         x="120.38541"
+         y="39.6875"
+         id="tspan13370">BaseDepthPacketProcessor *async_depth_processor_;</tspan></text>
+    <rect
+       style="fill:none;stroke:#00ccff;stroke-width:0.55;paint-order:markers fill stroke"
+       id="rect13413"
+       width="88.635429"
+       height="51.59375"
+       x="116.41666"
+       y="5.2916665"
+       ry="1.3229169" />
+    <path
+       style="fill:none;stroke:#00ccff;stroke-width:0.55;paint-order:markers fill stroke"
+       d="m 116.41667,11.90625 89.95833,0"
+       id="path13415"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#00ccff;stroke-width:0.55;paint-order:markers fill stroke"
+       d="M 116.41667,43.656251 H 206.375"
+       id="path13417"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#7137c8;stroke-width:0.55;marker-start:url(#EmptyDiamond);paint-order:markers fill stroke"
+       d="m 113.24167,15.875 3.175,0"
+       id="path13637"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="111.12498"
+       y="82.020836"
+       id="text363"><tspan
+         sodipodi:role="line"
+         id="tspan361"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1"
+         x="111.12498"
+         y="82.020836">TurboJpegRgbPacketProcessor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="111.12498"
+       y="76.729172"
+       id="text469"><tspan
+         sodipodi:role="line"
+         id="tspan467"
+         style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1"
+         x="111.12498"
+         y="76.729172">TegraJpegRgbPacketProcessor</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="111.12498"
+       y="71.437508"
+       id="text473"><tspan
+         sodipodi:role="line"
+         id="tspan471"
+         style="fill:#666666;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1"
+         x="111.12498"
+         y="71.437508">VaapiRgbPacketProcessor</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 132.10919,83.34375 v 76.72917"
+       id="path475" />
+    <rect
+       style="fill:#d5f6ff;fill-opacity:1;stroke:#000000;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect477"
+       width="2.6458333"
+       height="34.395832"
+       x="130.96873"
+       y="88.370827" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 22.489583,94.52 H 129.11667"
+       id="path479"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       x="40.216667"
+       y="92.604164"
+       id="text598"><tspan
+         sodipodi:role="line"
+         id="tspan596"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.55;stroke-opacity:1"
+         x="40.216667"
+         y="92.604164">RgbPacketProcessor *getDefaultRgbPacketProcessor()</tspan></text>
+  </g>
+</svg>

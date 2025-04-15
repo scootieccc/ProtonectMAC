@@ -88,6 +88,28 @@ class LIBFREENECT2_API Frame
   unsigned char* rawdata; ///< Unaligned start of #data.
 };
 
+
+#ifdef LIBFREENECT2_WITH_CUDA_SUPPORT
+/**
+ * Frame whose data is allocated on device.
+ */
+class LIBFREENECT2_API CudaDeviceFrame: public Frame
+{
+public:
+	/** Construct a new frame.
+	 * @param width Width in pixel
+	 * @param height Height in pixel
+	 * @param bytes_per_pixel Bytes per pixel
+	 */
+	CudaDeviceFrame(size_t width, size_t height, size_t bytes_per_pixel);
+	virtual ~CudaDeviceFrame();
+  bool toHostFrame(Frame& frame);
+private:
+	bool allocateMemory();
+};
+#endif
+
+
 /** Callback interface to receive new frames. @ingroup frame
  * You can inherit from FrameListener and define your own listener.
  */

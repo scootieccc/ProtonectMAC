@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="sequence.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="2.0838024"
+     inkscape:cx="375.99535"
+     inkscape:cy="126.21158"
+     inkscape:window-width="1920"
+     inkscape:window-height="1044"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid119" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible"
+       id="marker22339"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="8.75"
+       markerHeight="5"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path22337"
+         transform="scale(-0.5)" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1L"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Arrow1L"
+       markerWidth="7"
+       markerHeight="4"
+       viewBox="0 0 8.75 5"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;fill-rule:evenodd;stroke:none"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="arrow1L"
+         transform="scale(-0.5)" />
+    </marker>
+    <rect
+       x="25"
+       y="105"
+       width="190"
+       height="120"
+       id="rect6525" />
+  </defs>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="8.4666662"
+       y="82.020836"
+       id="text4956"><tspan
+         sodipodi:role="line"
+         id="tspan4954"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="82.020836">int types = 0;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="85.989586"
+         id="tspan8818">libfreenect2::SyncMultiFrameListener listener</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="89.958336"
+         id="tspan8820">libfreenect2::FrameMap frames;</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665001;stroke-opacity:0.929412"
+       x="6.6145835"
+       y="38.364582"
+       id="text9694"><tspan
+         sodipodi:role="line"
+         id="tspan9692"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665;stroke-opacity:0.929412"
+         x="6.6145835"
+         y="38.364582">  libfreenect2::Freenect2 freenect2;</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665;stroke-opacity:0.929412"
+         x="6.6145835"
+         y="42.333332"
+         id="tspan9696">  libfreenect2::Freenect2Device *dev = 0;</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.665;stroke-opacity:0.929412"
+         x="6.6145835"
+         y="46.302082"
+         id="tspan9698">  libfreenect2::PacketPipeline *pipeline = 0;</tspan></text>
+    <rect
+       style="fill:none;stroke:#ffcc00;stroke-width:0.665001"
+       id="rect865"
+       width="76.729164"
+       height="112.44791"
+       x="2.6458333"
+       y="3.96875"
+       ry="1.3229179" />
+    <rect
+       style="fill:none;stroke:#2ca02c;stroke-width:0.665001"
+       id="rect6587"
+       width="70.114586"
+       height="85.989586"
+       x="6.614583"
+       y="27.78125"
+       ry="1.3229179" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+       x="3.6607749"
+       y="8.4984169"
+       id="text113"><tspan
+         sodipodi:role="line"
+         id="tspan111"
+         style="stroke-width:0.264583"
+         x="3.6607749"
+         y="8.4984169">Protonect.cpp</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+       x="8.9905415"
+       y="31.71825"
+       id="text117"><tspan
+         sodipodi:role="line"
+         id="tspan115"
+         style="stroke-width:0.264583"
+         x="8.9905415"
+         y="31.71825">main</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.264583"
+       x="83.073875"
+       y="45.540085"
+       id="text264"><tspan
+         sodipodi:role="line"
+         id="tspan262"
+         style="stroke-width:0.264583"
+         x="83.073875"
+         y="45.540085">libfreenect2::CudaAccessPacketPipeline(deviceId)</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 71.4375,44.979167 6.614583,0"
+       id="path320"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke:none;stroke-width:0.665001"
+       x="6.3447084"
+       y="16.980959"
+       id="text4045"><tspan
+         sodipodi:role="line"
+         id="tspan4043"
+         style="fill:#000000;stroke:none;stroke-width:0.665"
+         x="6.3447084"
+         y="16.980959">bool protonect_shutdown = false;</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.665"
+         x="6.3447084"
+         y="20.949709"
+         id="tspan4887">bool protonect_paused = false;</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.665"
+         x="6.3447084"
+         y="24.918459"
+         id="tspan5629">libfreenect2::Freenect2Device *devtopause;</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;stroke:none;stroke-width:0.665"
+         x="6.3447084"
+         y="28.887209"
+         id="tspan4889" /></text>
+    <text
+       xml:space="preserve"
+       transform="scale(0.26458333)"
+       id="text6523"
+       style="white-space:pre;shape-inside:url(#rect6525);display:inline;fill:#2ca02c;stroke:#2ca02c;stroke-width:2.51339" />
+    <path
+       style="fill:none;stroke:#ffcc00;stroke-width:0.665001;stroke-opacity:0.752941"
+       d="m 2.6458333,10.583333 76.7291667,0"
+       id="path6786"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#2ca02c;stroke-width:0.665001;stroke-opacity:1"
+       d="m 6.6145832,33.072916 70.1145838,10e-7"
+       id="path7256"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-opacity:0.929412"
+       x="6.6145835"
+       y="51.59375"
+       id="text13099"><tspan
+         sodipodi:role="line"
+         id="tspan13097"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="51.59375">  std::string serial = &quot;&quot;;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="55.5625"
+         id="tspan13101" /><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="59.53125"
+         id="tspan13103">  bool viewer_enabled = true;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="63.5"
+         id="tspan13105">  bool enable_rgb = true;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="67.46875"
+         id="tspan13107">  bool enable_depth = true;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="71.4375"
+         id="tspan13109">  int deviceId = -1;</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="6.6145835"
+         y="75.40625"
+         id="tspan13111">  size_t framemax = -1;</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 41.010417,50.270833 H 78.052083"
+       id="path16211"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-opacity:0.929412"
+       x="83.34375"
+       y="51.59375"
+       id="text16959"><tspan
+         sodipodi:role="line"
+         id="tspan16957"
+         style="stroke-width:0.365"
+         x="83.34375"
+         y="51.59375">freenect2.getDefaultDeviceSerialNumber();</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 67.46875,41.010417 h 59.00208"
+       id="path21434"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-opacity:0.929412"
+       x="128.32288"
+       y="42.333332"
+       id="text22182"><tspan
+         sodipodi:role="line"
+         id="tspan22180"
+         style="stroke-width:0.365"
+         x="128.32288"
+         y="42.333332">freenect2.openDevice(serial, pipeline);</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 78.316669,84.666671 h 3.439583"
+       id="path22230"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker22339)"
+       d="M 157.42708,44.979166 177.27083,43.65625"
+       id="path22335"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker22339)"
+       d="M 148.16974,50.138578 165.62917,43.65625"
+       id="path22419"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker22339)"
+       d="M 186.53125,41.010417 72.760417,23.8125"
+       id="path3351"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="83.07917"
+       y="82.020836"
+       id="text6510"><tspan
+         sodipodi:role="line"
+         id="tspan6508"
+         style="stroke-width:0.365"
+         x="83.07917"
+         y="82.020836">libfreenect2::Frame::Color | libfreenect2::Frame::Ir | libfreenect2::Frame::Depth </tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 27.78125,80.962501 H 78.052083"
+       id="path8012"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="84.666664"
+       y="85.724998"
+       id="text9630"><tspan
+         sodipodi:role="line"
+         id="tspan9628"
+         style="stroke-width:0.365"
+         x="84.666664"
+         y="85.724998">(   )</tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker22339)"
+       d="M 141.55208,82.020833 87.3125,84.666667"
+       id="path9632"
+       inkscape:connector-type="polyline"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="10.583333"
+       y="129.64583"
+       id="text10445"><tspan
+         sodipodi:role="line"
+         id="tspan10443"
+         style="stroke-width:0.365"
+         x="10.583333"
+         y="129.64583">dev</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="21.166666"
+       y="141.28749"
+       id="text11199"><tspan
+         sodipodi:role="line"
+         id="tspan11197"
+         style="stroke-width:0.365"
+         x="21.166666"
+         y="141.28749">setColorFrameListener(&amp;listener)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="21.166666"
+       y="148.16667"
+       id="text11953"><tspan
+         sodipodi:role="line"
+         id="tspan11951"
+         style="stroke-width:0.365"
+         x="21.166666"
+         y="148.16667">setIrAndDepthFrameListener(&amp;listener)</tspan></text>
+    <path
+       style="fill:#000000;stroke-width:0.365001;stroke-opacity:1;stroke:#000000;stroke-dasharray:1.46000397,0.73000198;stroke-dashoffset:0"
+       d="m 13.229167,132.29166 v 76.72917"
+       id="path13574" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect13748"
+       width="10.583333"
+       height="7.9375"
+       x="7.9375"
+       y="124.35416"
+       ry="1.3229179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,140.22917 h 3.439583"
+       id="path13817"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,147.10832 h 3.439583"
+       id="path13819"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="21.166666"
+       y="155.57501"
+       id="text14694"><tspan
+         sodipodi:role="line"
+         id="tspan14692"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="21.166666"
+         y="155.57501">start()</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,154.51667 h 3.439583"
+       id="path14746"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="8.4666662"
+       y="97.895828"
+       id="text373"><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="97.895828"
+         id="tspan369">libfreenect2::Registration* registration</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="101.86458"
+         id="tspan371">libfreenect2::Frame undistorted(512,424,4),</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.365"
+         x="8.4666662"
+         y="105.83333"
+         id="tspan429">                                    registered(512,424,4);</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="81.491669"
+       y="97.895828"
+       id="text483"><tspan
+         sodipodi:role="line"
+         id="tspan481"
+         style="stroke-width:0.365"
+         x="81.491669"
+         y="97.895828">libfreenect2::Registration(dev-&gt;getIrCameraParams(), dev-&gt;getColorCameraParams())</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 67.733333,96.837503 h 10.31875"
+       id="path485"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="84.666664"
+       y="129.64583"
+       id="text664"><tspan
+         sodipodi:role="line"
+         id="tspan662"
+         style="stroke-width:0.365"
+         x="84.666664"
+         y="129.64583">listener</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect666"
+       width="15.875003"
+       height="7.9375"
+       x="82.020828"
+       y="124.35416"
+       ry="1.3229179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 89.958326,132.29166 v 76.72917"
+       id="path668" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.895828"
+       y="160.86668"
+       id="text672"><tspan
+         sodipodi:role="line"
+         id="tspan670"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.895828"
+         y="160.86668">waitForNewFrame(frames, 10*1000)</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.895828"
+         y="164.83543"
+         id="tspan1064">        // 10 seconds</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 91.810406,159.80834 h 3.439577"
+       id="path674"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.895828"
+       y="192.61671"
+       id="text850"><tspan
+         sodipodi:role="line"
+         id="tspan848"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.895828"
+         y="192.61671">release(frames)</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 91.810406,191.55836 h 3.439577"
+       id="path852"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="21.166666"
+       y="197.90839"
+       id="text945"><tspan
+         sodipodi:role="line"
+         id="tspan943"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="21.166666"
+         y="197.90839">stop()</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,196.85003 h 3.439583"
+       id="path947"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="21.166666"
+       y="203.20006"
+       id="text951"><tspan
+         sodipodi:role="line"
+         id="tspan949"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="21.166666"
+         y="203.20006">close()</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,202.1417 h 3.439583"
+       id="path953"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="148.16666"
+       y="129.64583"
+       id="text1052"><tspan
+         sodipodi:role="line"
+         id="tspan1050"
+         style="stroke-width:0.365"
+         x="148.16666"
+         y="129.64583">registration</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1054"
+       width="21.166666"
+       height="7.9375"
+       x="145.52083"
+       y="124.35416"
+       ry="1.3229179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 153.45836,132.29166 v 76.72917"
+       id="path1056" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="160.86671"
+       y="208.49173"
+       id="text1060"><tspan
+         sodipodi:role="line"
+         id="tspan1058"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="160.86671"
+         y="208.49173">delete</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 154.78127,207.43337 h 3.43958"
+       id="path1062"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="30.691664"
+       y="166.68753"
+       id="text1068"><tspan
+         sodipodi:role="line"
+         id="tspan1066"
+         style="stroke-width:0.365"
+         x="30.691664"
+         y="166.68753">*rgb</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1070"
+       width="10.583333"
+       height="7.9375"
+       x="29.104166"
+       y="161.39586"
+       ry="1.3229179" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="48.154167"
+       y="166.68753"
+       id="text1074"><tspan
+         sodipodi:role="line"
+         id="tspan1072"
+         style="stroke-width:0.365"
+         x="48.154167"
+         y="166.68753">*ir</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1076"
+       width="10.583333"
+       height="7.9375"
+       x="44.979168"
+       y="161.39586"
+       ry="1.3229179" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="62.970837"
+       y="166.68753"
+       id="text1080"><tspan
+         sodipodi:role="line"
+         id="tspan1078"
+         style="stroke-width:0.365"
+         x="62.970837"
+         y="166.68753">*depth</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect1082"
+       width="15.875003"
+       height="7.9375"
+       x="60.854168"
+       y="161.39586"
+       ry="1.3229179" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 34.395835,169.33333 v 18.52083"
+       id="path1196"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 50.270836,169.33333 v 18.52083"
+       id="path1198"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365001;stroke-dasharray:1.46, 0.730002;stroke-dashoffset:0;stroke-opacity:1"
+       d="m 68.791669,169.33333 v 18.52083"
+       id="path1200"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.353195"
+       y="171.64882"
+       id="text1319"><tspan
+         sodipodi:role="line"
+         id="tspan1317"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.353195"
+         y="171.64882">frames[libfreenect2::Frame::Color]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.353195"
+       y="176.94049"
+       id="text1323"><tspan
+         sodipodi:role="line"
+         id="tspan1321"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.353195"
+         y="176.94049">frames[libfreenect2::Frame::Ir]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="97.353195"
+       y="182.23216"
+       id="text1327"><tspan
+         sodipodi:role="line"
+         id="tspan1325"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="97.353195"
+         y="182.23216">frames[libfreenect2::Frame::Depth]</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365001;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       x="159.80836"
+       y="187.32504"
+       id="text1452"><tspan
+         sodipodi:role="line"
+         id="tspan1450"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="159.80836"
+         y="187.32504">apply(rgb, depth,</tspan><tspan
+         sodipodi:role="line"
+         style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.365"
+         x="159.80836"
+         y="191.29379"
+         id="tspan1460">      &amp;undistorted, &amp;registered)</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 34.131254,170.92088 H 94.98542"
+       id="path1454"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 50.006254,176.21255 H 94.98542"
+       id="path1456"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="M 68.527087,181.50422 H 94.98542"
+       id="path1458"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 153.72293,186.26669 h 3.43958"
+       id="path1462"
+       sodipodi:nodetypes="cc" />
+    <text
+       xml:space="preserve"
+       style="font-size:3.175px;fill:#000000;stroke-width:0.365001;stroke-opacity:0.929412"
+       x="21.166666"
+       y="134.93753"
+       id="text425"><tspan
+         sodipodi:role="line"
+         id="tspan423"
+         style="stroke-width:0.365"
+         x="21.166666"
+         y="134.93753">freenect2.openDevice(serial, pipeline);</tspan></text>
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:0.365;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow1L)"
+       d="m 15.08125,133.87913 h 3.439583"
+       id="path427"
+       sodipodi:nodetypes="cc" />
+    <rect
+       style="fill:#d5f6ff;fill-opacity:1;stroke:#000000;stroke-width:0.55;stroke-opacity:1;paint-order:markers fill stroke"
+       id="rect7553"
+       width="2.6458333"
+       height="34.395832"
+       x="11.90625"
+       y="133.61458" />
+  </g>
+</svg>
