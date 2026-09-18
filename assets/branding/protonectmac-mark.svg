@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">ProtonectMAC mark</title>
+  <desc id="desc">A stylized Kinect depth sensor emitting cyan depth waves.</desc>
+  <defs>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#22d3ee"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#0b1220"/>
+  <rect x="52" y="52" width="408" height="408" rx="92" fill="#111827" stroke="#1f2937" stroke-width="8"/>
+  <path d="M150 190c64-64 148-64 212 0M183 226c42-42 104-42 146 0" fill="none" stroke="url(#beam)" stroke-width="24" stroke-linecap="round"/>
+  <rect x="128" y="278" width="256" height="92" rx="32" fill="#050914" stroke="#334155" stroke-width="7"/>
+  <circle cx="188" cy="324" r="22" fill="#22d3ee"/>
+  <circle cx="256" cy="324" r="16" fill="#64748b"/>
+  <circle cx="324" cy="324" r="28" fill="#111827" stroke="#67e8f9" stroke-width="9"/>
+  <path d="M256 370v42" stroke="#334155" stroke-width="14" stroke-linecap="round"/>
+</svg>
