@@ -1,256 +1,139 @@
-# libfreenect2
+<p align="center">
+  <img src="assets/branding/protonectmac-logo.svg" alt="ProtonectMAC" width="760">
+</p>
 
-## Table of Contents
+<p align="center"><strong>Kinect v2 support for legacy Intel Macs — centered on macOS 10.15 Catalina and 2013 MacBook Pro-era hardware.</strong></p>
 
-* [Description](README.md#description)
-* [Requirements](README.md#requirements)
-* [Troubleshooting](README.md#troubleshooting-and-reporting-bugs)
-* [Maintainers](README.md#maintainers)
-* [Installation](README.md#installation)
-  * [Windows / Visual Studio](README.md#windows--visual-studio)
-  * [MacOS](README.md#macos)
-  * [Linux](README.md#linux)
-* [API Documentation (external)](https://openkinect.github.io/libfreenect2/)
+> **Compatibility target:** Intel (`x86_64`) Mac hardware running **macOS 10.15 Catalina**, with the **2013 MacBook Pro** as the reference use case. ProtonectMAC exists to keep Kinect v2 usable within the USB, driver, dependency, and operating-system constraints of that generation of Mac hardware.
 
-## Description
+## What is ProtonectMAC?
 
-Driver for Kinect for Windows v2 (K4W2) devices (release and developer preview).
+**ProtonectMAC** is a Mac-focused libfreenect2/Protonect repository built around a specific legacy-computing problem: using a **Kinect v2** on Intel MacBooks that are constrained to older macOS releases and older dependency/toolchain combinations.
 
-Note: libfreenect2 does not do anything for either Kinect for Windows v1 or Kinect for Xbox 360 sensors. Use libfreenect1 for those sensors.
+The project is especially aimed at **2013 MacBook Pro hardware on macOS 10.15 Catalina**. Rather than treating that configuration as obsolete or incidental, ProtonectMAC documents it as the primary compatibility target.
 
-If you are using libfreenect2 in an academic context, please cite our work using the following DOI: [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.50641.svg)](https://doi.org/10.5281/zenodo.50641)
+The underlying driver source is based on **OpenKinect/libfreenect2** and provides RGB, infrared/depth transfer, and RGB/depth registration for Kinect v2-class hardware. ProtonectMAC preserves that upstream provenance while adding repository organization, branding, and guidance focused on legacy Intel Mac use.
 
+### Scope
 
+| Component | Target |
+| --- | --- |
+| CPU architecture | **Intel x86_64** |
+| Primary OS | **macOS 10.15 Catalina** |
+| Reference hardware | **2013 MacBook Pro** |
+| Sensor | **Kinect v2 / Kinect for Windows v2** |
+| Connection | **USB 3.x** via the powered Kinect adapter |
+| Build system | CMake |
+| Apple Silicon | **Not the primary target** |
+| Current macOS releases | **Not the primary target** |
 
-If you use the KDE depth unwrapping algorithm implemented in the library, please also cite this ECCV 2016 [paper](http://users.isy.liu.se/cvl/perfo/abstracts/jaremo16.html).
+This repository is intentionally a **legacy compatibility project**, not a claim that the historical driver has been modernized for every current Mac configuration.
 
-This driver supports:
-* RGB image transfer
-* IR and depth image transfer
-* registration of RGB and depth images
+## Why this repository exists
 
-Missing features:
-* firmware updates (see [issue #460](https://github.com/OpenKinect/libfreenect2/issues/460) for WiP)
+A 2013 MacBook Pro can still be useful hardware, but using Kinect v2 on it means working inside several constraints at once:
 
-Watch the OpenKinect wiki at www.openkinect.org and the mailing list at https://groups.google.com/forum/#!forum/openkinect for the latest developments and more information about the K4W2 USB protocol.
+- Intel-only hardware and an older macOS ceiling
+- macOS 10.15 Catalina-era compiler and framework behavior
+- dependency versions that may no longer match current package-manager defaults
+- Kinect v2's strict USB 3.x bandwidth/isochronous-transfer requirements
+- no reliance on Microsoft's Windows-only Kinect SDK stack
 
-The API reference documentation is provided here https://openkinect.github.io/libfreenect2/.
+ProtonectMAC keeps the relevant libfreenect2 source, Protonect example, and Mac-specific setup information together so this exact class of machine remains practical to experiment with.
 
-## Requirements
+## Catalina quick start
 
-### Hardware requirements
+### 1. Verify the Mac
 
-* USB 3.0 controller. USB 2 is not supported.
-
-Intel and NEC USB 3.0 host controllers are known to work. ASMedia controllers are known to not work.
-
-Virtual machines likely do not work, because USB 3.0 isochronous transfer is quite delicate.
-
-##### Requirements for multiple Kinects
-
-It has been reported to work for up to 5 devices on a high-end PC using multiple separate PCI Express USB3 expansion cards (with NEC controller chip). If you're using Linux, you may have to [increase USBFS memory buffers](https://github.com/OpenKinect/libfreenect2/wiki/Troubleshooting#multiple-kinects-try-increasing-usbfs-buffer-size). Depending on the number of Kinects, you may need to use an even larger buffer size. If you're using an expansion card, make sure it's not plugged into an PCI-E x1 slot. A single lane doesn't have enough bandwidth. x8 or x16 slots usually work.
-
-### Operating system requirements
-
-* Windows 7 (buggy), Windows 8, Windows 8.1, and probably Windows 10
-* Debian, Ubuntu 14.04 or newer, probably other Linux distros. Recommend kernel 3.16+ or as new as possible.
-* Mac OS X
-
-### Requirements for optional features
-
-* OpenGL depth processing: OpenGL 3.1 (Windows, Linux, Mac OS X). OpenGL ES is not supported at the moment.
-* OpenCL depth processing: OpenCL 1.1
-* CUDA depth processing: CUDA (6.5 and 7.5 are tested; The minimum version is not clear.)
-* VAAPI JPEG decoding: Intel (minimum Ivy Bridge or newer) and Linux only
-* VideoToolbox JPEG decoding: Mac OS X only
-* OpenNI2 integration: OpenNI2 2.2.0.33
-* Jetson TK1: Linux4Tegra 21.3 or later. Check [Jetson TK1 issues](https://github.com/OpenKinect/libfreenect2/wiki/Troubleshooting#jetson-tk1-issues) before installation. Jetson TX1 is not yet supported as the developers don't have one, but it may be easy to add the support.
-
-## Troubleshooting and reporting bugs
-
-First, check https://github.com/OpenKinect/libfreenect2/wiki/Troubleshooting for known issues.
-
-When you report USB issues, please attach relevant debug log from running the program with environment variable `LIBUSB_DEBUG=3`, and relevant log from `dmesg`. Also include relevant hardware information `lspci` and `lsusb -t`.
-
-## Maintainers
-
-* Joshua Blake <joshblake@gmail.com>
-* Florian Echtler
-* Christian Kerl
-* Lingzhu Xiang (development/master branch)
-
-## Installation
-
-### Windows / Visual Studio
-
-* Install UsbDk driver
-
-    1. (Windows 7) You must first install Microsoft Security Advisory 3033929 otherwise your USB keyboards and mice will stop working!
-    2. Download the latest x64 installer from https://github.com/daynix/UsbDk/releases, install it.
-    3. If UsbDk somehow does not work, uninstall UsbDk and follow the libusbK instructions.
-
-    This doesn't interfere with the Microsoft SDK. Do not install both UsbDK and libusbK drivers
-* (Alternatively) Install libusbK driver
-
-    You don't need the Kinect for Windows v2 SDK to build and install libfreenect2, though it doesn't hurt to have it too. You don't need to uninstall the SDK or the driver before doing this procedure.
-
-    Install the libusbK backend driver for libusb. Please follow the steps exactly:
-
-    1. Download Zadig from http://zadig.akeo.ie/.
-    2. Run Zadig and in options, check "List All Devices" and uncheck "Ignore Hubs or Composite Parents"
-    3. Select the "Xbox NUI Sensor (composite parent)" from the drop-down box. (Important: Ignore the "NuiSensor Adaptor" varieties, which are the adapter, NOT the Kinect) The current driver will list usbccgp. USB ID is VID 045E, PID 02C4 or 02D8.
-    4. Select libusbK (v3.0.7.0 or newer) from the replacement driver list.
-    5. Click the "Replace Driver" button. Click yes on the warning about replacing a system driver. (This is because it is a composite parent.)
-
-    To uninstall the libusbK driver (and get back the official SDK driver, if installed):
-
-    1. Open "Device Manager"
-    2. Under "libusbK USB Devices" tree, right click the "Xbox NUI Sensor (Composite Parent)" device and select uninstall.
-    3. Important: Check the "Delete the driver software for this device." checkbox, then click OK.
-
-    If you already had the official SDK driver installed and you want to use it:
-
-    4. In Device Manager, in the Action menu, click "Scan for hardware changes."
-
-    This will enumerate the Kinect sensor again and it will pick up the K4W2 SDK driver, and you should be ready to run KinectService.exe again immediately.
-
-    You can go back and forth between the SDK driver and the libusbK driver very quickly and easily with these steps.
-
-* Install libusb
-
-    Download the latest build (.7z file) from https://github.com/libusb/libusb/releases, and extract as `depends/libusb` (rename folder `libusb-1.x.y` to `libusb` if any).
-* Install TurboJPEG
-
-    Download the `-vc64.exe` installer from http://sourceforge.net/projects/libjpeg-turbo/files, extract it to `c:\libjpeg-turbo64` (the installer's default) or `depends/libjpeg-turbo64`, or anywhere as specified by the environment variable `TurboJPEG_ROOT`.
-* Install GLFW
-
-    Download from http://www.glfw.org/download.html (64-bit), extract as `depends/glfw` (rename `glfw-3.x.x.bin.WIN64` to `glfw`), or anywhere as specified by the environment variable `GLFW_ROOT`.
-* Install OpenCL (optional)
-    1. Intel GPU: Download "Intel® SDK for OpenCL™ Applications 2016" from https://software.intel.com/en-us/intel-opencl (requires free registration) and install it.
-* Install CUDA (optional, Nvidia only)
-    1. Download CUDA Toolkit and install it. You MUST install the samples too.
-* Install OpenNI2 (optional)
-
-    Download OpenNI 2.2.0.33 (x64) from http://structure.io/openni, install it to default locations (`C:\Program Files...`).
-* Build
-
-    The default installation path is `install`, you may change it by editing `CMAKE_INSTALL_PREFIX`.
-    ```
-    mkdir build && cd build
-    cmake .. -G "Visual Studio 12 2013 Win64"
-    cmake --build . --config RelWithDebInfo --target install
-    ```
-    Or `-G "Visual Studio 14 2015 Win64"`.
-    Or `-G "Visual Studio 16 2019"`.
-* Run the test program: `.\install\bin\Protonect.exe`, or start debugging in Visual Studio.
-* Test OpenNI2 (optional)
-
-    Copy freenect2-openni2.dll, and other dll files (libusb-1.0.dll, glfw.dll, etc.) in `install\bin` to `C:\Program Files\OpenNI2\Tools\OpenNI2\Drivers`. Then run `C:\Program Files\OpenNI\Tools\NiViewer.exe`. Environment variable `LIBFREENECT2_PIPELINE` can be set to `cl`, `cuda`, etc to specify the pipeline.
-
-### Windows / vcpkg
-
-You can download and install libfreenect2 using the [vcpkg](https://github.com/Microsoft/vcpkg) dependency manager:
+```bash
+sw_vers
+uname -m
+system_profiler SPHardwareDataType
 ```
-git clone https://github.com/Microsoft/vcpkg.git
-cd vcpkg
-./vcpkg integrate install
-vcpkg install libfreenect2
+
+The intended configuration reports **macOS 10.15.x** and **x86_64**.
+
+### 2. Install build dependencies
+
+You need CMake, pkg-config, libusb, GLFW, and optionally TurboJPEG. On an existing Catalina Homebrew setup, the package names are typically:
+
+```bash
+brew install cmake pkg-config libusb glfw jpeg-turbo
 ```
-The libfreenect2 port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
 
-### MacOS
+> Homebrew's current support policy and formula versions change over time. On Catalina, you may need versions compatible with the older OS rather than the newest available formulae.
 
-Use your favorite package managers (brew, ports, etc.) to install most if not all dependencies:
+### 3. Clone and build
 
-* Make sure these build tools are available: wget, git, cmake, pkg-config. Xcode may provide some of them. Install the rest via package managers.
-* Download libfreenect2 source
-    ```
-    git clone https://github.com/OpenKinect/libfreenect2.git
-    cd libfreenect2
-    ```
-* Install dependencies: libusb, GLFW
-    ```
-    brew update
-    brew install libusb
-    brew install glfw3
-    ```
-* Install TurboJPEG (optional)
-    ```
-    brew install jpeg-turbo
-    ```
-* Install CUDA (optional): TODO
-* Install OpenNI2 (optional)
-    ```
-    brew tap brewsci/science
-    brew install openni2
-    export OPENNI2_REDIST=/usr/local/lib/ni2
-    export OPENNI2_INCLUDE=/usr/local/include/ni2
-    ```
-* Build
-    ```
-    mkdir build && cd build
-    cmake ..
-    make
-    make install
-    ```
-* Run the test program: `./bin/Protonect`
-* Test OpenNI2. `make install-openni2` (may need sudo), then run `NiViewer`. Environment variable `LIBFREENECT2_PIPELINE` can be set to `cl`, `cuda`, etc to specify the pipeline.
+```bash
+git clone https://github.com/scootieccc/ProtonectMAC.git
+cd ProtonectMAC
 
-### Linux
+cmake -S . -B build \
+  -DENABLE_CUDA=OFF \
+  -DENABLE_VAAPI=OFF \
+  -DENABLE_TEGRAJPEG=OFF
 
-Note: Ubuntu 12.04 is too old to support. Debian jessie may also be too old, and Debian stretch is implied in the following.
+cmake --build build --parallel
+```
 
-* Download libfreenect2 source
-    ```
-    git clone https://github.com/OpenKinect/libfreenect2.git
-    cd libfreenect2
-    ```
-* (Ubuntu 14.04 only) Download upgrade deb files
-    ```
-    cd depends; ./download_debs_trusty.sh
-    ```
-* Install build tools
-    ```
-    sudo apt-get install build-essential cmake pkg-config
-    ```
-* Install libusb. The version must be >= 1.0.20.
-    1. (Ubuntu 14.04 only) `sudo dpkg -i debs/libusb*deb`
-    2. (Other) `sudo apt-get install libusb-1.0-0-dev`
-* Install TurboJPEG
-    1. (Ubuntu 14.04 to 16.04) `sudo apt-get install libturbojpeg libjpeg-turbo8-dev`
-    2. (Debian/Ubuntu 17.10 and newer) `sudo apt-get install libturbojpeg0-dev`
-* Install OpenGL
-    1. (Ubuntu 14.04 only) `sudo dpkg -i debs/libglfw3*deb; sudo apt-get install -f`
-    2. (Odroid XU4) OpenGL 3.1 is not supported on this platform. Use `cmake -DENABLE_OPENGL=OFF` later.
-    3. (Other) `sudo apt-get install libglfw3-dev`
-* Install OpenCL (optional)
-    - Intel GPU
-        1. (Ubuntu 14.04 only) `sudo apt-add-repository ppa:floe/beignet; sudo apt-get update; sudo apt-get install beignet-dev; sudo dpkg -i debs/ocl-icd*deb`
-        2. (Other) `sudo apt-get install beignet-dev`
-        3. For older kernels, `# echo 0 >/sys/module/i915/parameters/enable_cmd_parser` is needed. See more known issues at https://www.freedesktop.org/wiki/Software/Beignet/.
-    - AMD GPU: Install the latest version of the AMD Catalyst drivers from https://support.amd.com and `apt-get install opencl-headers`.
-    - Mali GPU (e.g. Odroid XU4): (with root) `mkdir -p /etc/OpenCL/vendors; echo /usr/lib/arm-linux-gnueabihf/mali-egl/libmali.so >/etc/OpenCL/vendors/mali.icd; apt-get install opencl-headers`.
-    - Verify: You can install `clinfo` to verify if you have correctly set up the OpenCL stack.
-* Install CUDA (optional, Nvidia only):
-    - (Ubuntu 14.04 only) Download `cuda-repo-ubuntu1404...*.deb` ("deb (network)") from Nvidia website, follow their installation instructions, including `apt-get install cuda` which installs Nvidia graphics driver.
-    - (Jetson TK1) It is preloaded.
-    - (Nvidia/Intel dual GPUs) After `apt-get install cuda`, use `sudo prime-select intel` to use Intel GPU for desktop.
-    - (Other) Follow Nvidia website's instructions. You must install the samples package.
-* Install VAAPI (optional, Intel only)
-    1. (Ubuntu 14.04 only) `sudo dpkg -i debs/{libva,i965}*deb; sudo apt-get install -f`
-    2. (Other) `sudo apt-get install libva-dev libjpeg-dev`
-    3. Linux kernels 4.1 to 4.3 have performance regression. Use 4.0 and earlier or 4.4 and later (Though Ubuntu kernel 4.2.0-28.33~14.04.1 has backported the fix).
-* Install OpenNI2 (optional)
-    1. (Ubuntu 14.04 only) `sudo apt-add-repository ppa:deb-rob/ros-trusty && sudo apt-get update` (You don't need this if you have ROS repos), then `sudo apt-get install libopenni2-dev`
-    2. (Other) `sudo apt-get install libopenni2-dev`
-* Build (if you have run `cd depends` previously, `cd ..` back to the libfreenect2 root directory first.)
-    ```
-    mkdir build && cd build
-    cmake .. -DCMAKE_INSTALL_PREFIX=$HOME/freenect2
-    make
-    make install
-    ```
-    You need to specify `cmake -Dfreenect2_DIR=$HOME/freenect2/lib/cmake/freenect2` for CMake based third-party application to find libfreenect2.
-* Set up udev rules for device access: `sudo cp ../platform/linux/udev/90-kinect2.rules /etc/udev/rules.d/`, then replug the Kinect.
-* Run the test program: `./bin/Protonect`
-* Run OpenNI2 test (optional): `sudo apt-get install openni2-utils && sudo make install-openni2 && NiViewer2`. Environment variable `LIBFREENECT2_PIPELINE` can be set to `cl`, `cuda`, etc to specify the pipeline.
+### 4. Run Protonect
+
+```bash
+./build/bin/Protonect
+```
+
+If OpenCL creates configuration or runtime problems, rebuild with `-DENABLE_OPENCL=OFF` and use the CPU/OpenGL path instead.
+
+For a more detailed setup and troubleshooting path, see **[guides/MACOS.md](guides/MACOS.md)** and **[guides/COMPATIBILITY.md](guides/COMPATIBILITY.md)**.
+
+## Repository layout
+
+The source tree is intentionally kept close to libfreenect2's working layout so CMake paths, includes, and historical assumptions are not broken just for cosmetic restructuring.
+
+| Path | Purpose |
+| --- | --- |
+| `assets/branding/` | ProtonectMAC logo and visual assets |
+| `cmake_modules/` | Custom CMake find/setup modules |
+| `depends/` | Dependency helper scripts and third-party notices |
+| `doc/` | Doxygen source/configuration |
+| `examples/` | Protonect and viewer examples |
+| `guides/` | Intel Mac, Catalina, compatibility, and repository guides |
+| `include/` | Public and internal headers |
+| `platform/` | Platform-specific support files |
+| `src/` | Core libfreenect2 implementation |
+| `tools/` | Auxiliary utilities and streamer/recorder tooling |
+
+See **[guides/REPOSITORY_LAYOUT.md](guides/REPOSITORY_LAYOUT.md)** for the cleanup rationale.
+
+## Branches
+
+- **Source branch** — the actual project source and maintained repository presentation.
+- **`gh-pages`** — generated Doxygen/API documentation and historical documentation assets.
+- **`v0.1`** — historical version branch.
+
+If GitHub opens a large collection of generated HTML files instead of this README, the repository is still using `gh-pages` as its default branch. The source branch should be configured as the repository default (preferably named `main`).
+
+## Kinect v2 / USB notes
+
+Kinect v2 is unusually demanding about USB transport:
+
+- use the sensor's powered Kinect adapter;
+- connect through a true USB 3.x path;
+- prefer a direct MacBook Pro USB 3 port rather than a hub;
+- disconnect other high-bandwidth devices while troubleshooting;
+- virtual machines are generally a poor match for Kinect v2 isochronous USB traffic.
+
+## Project status
+
+ProtonectMAC contains a **historical libfreenect2 source snapshot**. Repository cleanup and documentation do not turn the underlying driver into a new implementation. The goal is to preserve and document a useful legacy Intel/Catalina configuration, particularly for 2013 MacBook Pro hardware.
+
+## Upstream and attribution
+
+Underlying driver project: **OpenKinect/libfreenect2**
+
+- Upstream source: https://github.com/OpenKinect/libfreenect2
+- Upstream API docs: https://openkinect.github.io/libfreenect2/
+- Upstream troubleshooting: https://github.com/OpenKinect/libfreenect2/wiki/Troubleshooting
+
+Original license files remain preserved as `APACHE20` and `GPL2`, with third-party dependency notices in `depends/LICENSES.txt`. The original libfreenect2 contributors retain attribution for the underlying driver implementation; ProtonectMAC branding and repository-specific documentation are additions around that codebase.
